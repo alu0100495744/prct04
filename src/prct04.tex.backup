@@ -1,0 +1,69 @@
+\documentclass[a4paper,11pt,twoside]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\title{Manejo básico de \LaTeX}
+\author{Javier Hernández Pérez}
+\date{\today}
+\begin{document}
+ \maketitle
+ %\newpage
+ \begin{center}
+\section*{Resumen}
+Este artículo trata de mostrar que \LaTeX es efectivo.
+\end {center}
+
+\section{Motivación y objetivos}
+\LaTeX es un gran procesdor de textos con grandes ventajas respecto a otros procesadores de textos como word. Por ejemplo:
+\begin{enumerate}
+\item \LaTeX es software libre. 
+\item No te tienes que preocupar del formato del archivo. Por ejemplo cuando en word quieres que algo esté al principio de una página y cambias algo en páginas anteriores tienes que preocuparte de que siga ahí. 
+\end {enumerate}
+
+\section{Acciones con \LaTeX}
+\subsection{Gráficos}
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.11]{i.eps}
+\end{center}
+\caption{imagen}
+\label{imagen}
+\end{figure}
+\pagebreak
+\subsection{Tablas}
+Un ejemplo de tabla es la siguiente tabla de valores de la función $y=x$
+
+\begin{table} [h]
+\begin{center}
+\begin{tabular}{cc}
+$y$ & $x$ 
+\\
+0 & 0 
+\\
+1 & 1 
+\\
+2 & 2
+\\
+3 & 3 
+\\
+4 & 4 
+\\
+5 & 5 
+\\
+\end{tabular}
+\end{center}
+\caption{tabla}
+\label{tabla}
+\end{table}
+\subsection{Hacer referencias}
+En \LaTeX se pueden poner notas al pie de página por ejemplo \footnote {Hola}.
+Se pueden hacer referencias por ejemplo hago una referencia a la tabla \ref {tabla} y otra a la gráfica \ref {imagen}.
+\begin{thebibliography}{9}
+ \bibitem{Be-spanish}
+\textsc{J. Bezos}, 
+Estilo spanish para el sistema babel,
+\url{http://www.ctan.org/tex-archive/language/spanish/babel/spanish.pdf}
+\end{thebibliography}
+
+\end{document}
